@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Task_1._1
 {
@@ -21,6 +22,10 @@ namespace Task_1._1
         {
             string value = Console.ReadLine();
             int result;
+            if (Int32.TryParse(value, out result))
+                return result;
+            Console.WriteLine("Incorrect input! Can't parse to Int32!");
+            value = Console.ReadLine();
             if (Int32.TryParse(value, out result))
                 return result;
             return 0;
@@ -55,70 +60,50 @@ namespace Task_1._1
         }
         public static void Rectangle()
         {
-            int a, b;
             Console.WriteLine("Input A to Rectangle: ");
-            a = GetConsoleIntValue();
+            int a = GetConsoleIntValue();
             Console.WriteLine("Input B to Rectangle: ");
-            b = GetConsoleIntValue();
-            if (a <= 0 || b <= 0) Console.WriteLine("Incorrect Input!");
+            int b = GetConsoleIntValue();
+            if (a <= 0 || b <= 0) Console.WriteLine("Incorrect Input!The number must not be less than zero");
             else
                 Console.WriteLine("S = " + a * b);
         }
         public static void Triangle()
         {
-            int n;
+
             Console.WriteLine("Input N to Triangle: ");
-            n = GetConsoleIntValue();
+            int n = GetConsoleIntValue();
             for (int i = 0; i < n; i++)
             {
-                for (int j = 0; j <= i; j++)
-                {
-                    Console.Write('*');
-                }
-                Console.WriteLine();
+                Console.WriteLine(new string('*', i));
             }
         }
         public static void AnotherTriangle()
         {
-            int n;
+
             Console.WriteLine("Input N to Another Triangle: ");
-            n = GetConsoleIntValue() * 2;
+            int n = GetConsoleIntValue() * 2;
             for (int i = 0; i < n; i++)
             {
-                if (i % 2 == 0)
+                if (i % 2 != 0)
                 {
-                    for (int k = 0; k <= (n - i) / 2 - 1; ++k)
-                    {
-                        Console.Write(' ');
-                    }
-                    for (int j = 0; j <= i; j++)
-                    {
-                        Console.Write("*");
-                    }
-                    Console.WriteLine();
+                    Console.Write(new string(' ', (n - i) / 2));
+                    Console.WriteLine(new string('*', i));
                 }
             }
         }
         public static void XMasTree()
         {
-            int n;
             Console.WriteLine("Input N to X-Mas Tree: ");
-            n = GetConsoleIntValue() * 2;
+            int n = GetConsoleIntValue() * 2;
             for (int l = 0; l <= n; l += 2)
             {
                 for (int i = 0; i < l; i++)
                 {
-                    if (i % 2 == 0)
+                    if (i % 2 != 0)
                     {
-                        for (int k = 0; k <= (n - i) / 2 - 1; ++k)
-                        {
-                            Console.Write(' ');
-                        }
-                        for (int j = 0; j <= i; j++)
-                        {
-                            Console.Write("*");
-                        }
-                        Console.WriteLine();
+                        Console.Write(new string(' ', (n - i) / 2));
+                        Console.WriteLine(new string('*', i));
                     }
 
                 }
@@ -126,7 +111,7 @@ namespace Task_1._1
         }
         public static void SumOfNumbers()
         {
-            Console.WriteLine("1.1.5\tSum of numbers.");
+            Console.WriteLine("\n1.1.5\tSum of numbers.");
             int sum = 0;
             for (int i = 3; i < 1000; i++)
             {
@@ -135,63 +120,105 @@ namespace Task_1._1
             }
             Console.WriteLine($"Sum %3 of %5 less 1000 = {sum}");
         }
+        public static void Output(List<string> list)
+        {
+
+            if (list.Count == 0) Console.WriteLine("Параметры надписи: None");
+            else
+            {
+                list.Sort();
+                Console.Write("Параметры надписи: ");
+                foreach (var item in list)
+                {
+
+                    Console.Write(item + ' ');
+                }
+                Console.WriteLine();
+            }
+        }
         public static void FontAdjustment()
         {
-            bool bold = false, italic = false, underline = false;
-        link:
-            if (bold && italic && underline) Console.WriteLine("Параметры надписи: Bold, Italic, Underline");
-            else if (bold && italic) Console.WriteLine("Параметры надписи: Bold, Italic");
-            else if (bold && underline) Console.WriteLine("Параметры надписи: Bold, Underline");
-            else if (italic && underline) Console.WriteLine("Параметры надписи:Italic, Underline");
-            else if (bold) Console.WriteLine("Параметры надписи: Bold");
-            else if (italic) Console.WriteLine("Параметры надписи: Italic");
-            else if (underline) Console.WriteLine("Параметры надписи: Underline");
-            else Console.WriteLine("Параметры надписи: None");
-            Console.WriteLine("Введите:\n\t1:bold\n\t2:italic\n\t3:underline");
-            switch (GetConsoleIntValue())
+            List<string> list = new List<string>();
+            Console.WriteLine("\n1.1.6 Font Adjustment");
+            bool temp = true, bold = false, italic = false, underline = false;
+            do
             {
-                case 1:
-                    bold = !bold;
-                    goto link;
-                case 2:
-                    italic = !italic;
-                    goto link;
-                case 3:
-                    underline =!underline;
-                    goto link;
-                default:
-                    break;
-            };
+
+                Output(list);
+                Console.WriteLine("Введите:\n\t1: bold\n\t2: italic\n\t3: underline");
+                switch (GetConsoleIntValue())
+                {
+                    case 1:
+                        bold = !bold;
+                        if (bold) list.Add("Bold");
+                        else list.Remove("Bold");
+                        break;
+                    case 2:
+                        italic = !italic;
+                        if (italic) list.Add("Italic");
+                        else list.Remove("Italic");
+                        break;
+                    case 3:
+                        underline = !underline;
+                        if (underline) list.Add("Underline");
+                        else list.Remove("Underline");
+                        break;
+                    default:
+                        temp = false;
+                        break;
+                };
+            }
+            while (temp);
         }
-        public static void ArrayProcessing()
+        public static void Random(ref int[] arr)
         {
-            Console.WriteLine("\n1.1.7 Array processing");
-            int n = 30;
-            int[] arr = new int[n];
             Random x = new Random();//Change random numbers
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] = x.Next(-100, 100);
             }
-            int min = arr[0], max = arr[0];
-            for (int i = 0; i < n; i++)
+        }
+        public static int Max(params int[] arr)
+        {
+            int max = arr[0];
+            for (int i = 0; i < arr.Length; i++)
             {
-                if (min > arr[i])       //find min
-                {
-                    min = arr[i];
-                }
                 if (max < arr[i])       //find max
                 {
                     max = arr[i];
                 }
             }
-            Sort(arr);                  //I use my described sorting
-            Console.WriteLine($"Min = {min} \nMax = {max}\nMass:");
-            for (int i = 0; i < n; i++)
+            return max;
+        }
+        public static int Min(params int[] arr)
+        {
+            int min = arr[0];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (min > arr[i])       //find min
+                {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        public static void Output(int[] arr)
+        {
+            Console.Write("Array: ");
+            for (int i = 0; i < arr.Length; i++)
             {
                 Console.Write($"{arr[i]} ");
             }
             Console.WriteLine();
+        }
+        public static void ArrayProcessing()
+        {
+            Console.WriteLine("\n1.1.7 Array processing");
+            int[] arr = new int[30];
+            Random(ref arr);
+            Sort(arr);                  //I use my described sorting
+            Console.WriteLine($"Min = {Min(arr)} \nMax = {Max(arr)}");
+            Output(arr);
 
         }
         public static void NoPositive()
@@ -224,6 +251,7 @@ namespace Task_1._1
                     sum += mass[i];
             }
             Console.WriteLine($"\n1.1.9.\tNon-Negative Sum = {sum}");
+            Output(mass);
         }
         public static void TwoDArray()
         {
@@ -238,7 +266,7 @@ namespace Task_1._1
                     {
                         sum += mas[i, j];
                     }
-                    Console.Write($"{mas[i,j]} ");
+                    Console.Write($"{mas[i, j]} ");
                 }
                 Console.WriteLine();
             }

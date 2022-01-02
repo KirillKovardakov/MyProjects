@@ -24,7 +24,7 @@ namespace Task_1._1
             int result;
             if (Int32.TryParse(value, out result))
                 return result;
-            Console.WriteLine("Incorrect input! Can't parse to Int32!");
+            Console.WriteLine("Incorrect input! Can't parse to Int32!");//
             value = Console.ReadLine();
             if (Int32.TryParse(value, out result))
                 return result;
@@ -64,7 +64,7 @@ namespace Task_1._1
             int a = GetConsoleIntValue();
             Console.WriteLine("Input B to Rectangle: ");
             int b = GetConsoleIntValue();
-            if (a <= 0 || b <= 0) Console.WriteLine("Incorrect Input!The number must not be less than zero");
+            if (a <= 0 || b <= 0) Console.WriteLine("Incorrect Input!The number must not be less than zero");//
             else
                 Console.WriteLine("S = " + a * b);
         }
@@ -72,7 +72,7 @@ namespace Task_1._1
         {
 
             Console.WriteLine("Input N to Triangle: ");
-            int n = GetConsoleIntValue();
+            int n = GetConsoleIntValue();//
             for (int i = 0; i < n; i++)
             {
                 Console.WriteLine(new string('*', i));
@@ -87,8 +87,8 @@ namespace Task_1._1
             {
                 if (i % 2 != 0)
                 {
-                    Console.Write(new string(' ', (n - i) / 2));
-                    Console.WriteLine(new string('*', i));
+                    Console.Write(new string(' ', (n - i) / 2));//
+                    Console.WriteLine(new string('*', i));//
                 }
             }
         }
@@ -102,8 +102,8 @@ namespace Task_1._1
                 {
                     if (i % 2 != 0)
                     {
-                        Console.Write(new string(' ', (n - i) / 2));
-                        Console.WriteLine(new string('*', i));
+                        Console.Write(new string(' ', (n - i) / 2));//
+                        Console.WriteLine(new string('*', i));//
                     }
 
                 }
@@ -136,7 +136,7 @@ namespace Task_1._1
                 Console.WriteLine();
             }
         }
-        public static void FontAdjustment()
+        public static void FontAdjustment()//
         {
             List<string> list = new List<string>();
             Console.WriteLine("\n1.1.6 Font Adjustment");
@@ -211,7 +211,7 @@ namespace Task_1._1
             }
             Console.WriteLine();
         }
-        public static void ArrayProcessing()
+        public static void ArrayProcessing()//
         {
             Console.WriteLine("\n1.1.7 Array processing");
             int[] arr = new int[30];

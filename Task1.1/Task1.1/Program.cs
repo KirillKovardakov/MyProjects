@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Task_1._1
@@ -120,53 +120,51 @@ namespace Task_1._1
             }
             Console.WriteLine($"Sum %3 of %5 less 1000 = {sum}");
         }
-        public static void Output(List<string> list)
+         public static void Output(Dictionary<string, bool> list)
         {
-
-            if (list.Count == 0) Console.WriteLine("Параметры надписи: None");
-            else
+            bool temp = true;
             {
-                list.Sort();
                 Console.Write("Параметры надписи: ");
                 foreach (var item in list)
                 {
-
-                    Console.Write(item + ' ');
+                    if (item.Value == true)
+                    {
+                        Console.Write(item.Key + ' ');
+                        temp = false;
+                    }
                 }
+                if (temp) Console.Write("None");
                 Console.WriteLine();
             }
         }
-        public static void FontAdjustment()//
+        public static void FontAdjustment()
         {
-            List<string> list = new List<string>();
-            Console.WriteLine("\n1.1.6 Font Adjustment");
-            bool temp = true, bold = false, italic = false, underline = false;
+            Dictionary<string, bool> dictionary = new Dictionary<string, bool>();
+            bool temp = true;
+            dictionary.Add("Bold", false);
+            dictionary.Add("Italic", false);
+            dictionary.Add("Underline", false);
             do
             {
 
-                Output(list);
+                Output(dictionary);
                 Console.WriteLine("Введите:\n\t1: bold\n\t2: italic\n\t3: underline");
                 switch (GetConsoleIntValue())
                 {
                     case 1:
-                        bold = !bold;
-                        if (bold) list.Add("Bold");
-                        else list.Remove("Bold");
+                        dictionary["Bold"] = !dictionary["Bold"];
                         break;
                     case 2:
-                        italic = !italic;
-                        if (italic) list.Add("Italic");
-                        else list.Remove("Italic");
+                        dictionary["Italic"] = !dictionary["Italic"];
                         break;
                     case 3:
-                        underline = !underline;
-                        if (underline) list.Add("Underline");
-                        else list.Remove("Underline");
+                        dictionary["Underline"] = !dictionary["Underline"];
                         break;
                     default:
                         temp = false;
                         break;
                 };
+                
             }
             while (temp);
         }

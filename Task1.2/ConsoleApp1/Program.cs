@@ -112,20 +112,17 @@ namespace ConsoleApp1
             char[] charSeparators = new char[] { ' ' };
             string[] str = strOriginal.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
             string tempString = str[0]; //Я не придумал ничего лучшего для обхода режима(только чтение) в изменении подиндексного значения
-            tempString = char.ToUpper(tempString[0]) + tempString.Remove(0,1);// Возможно, можно как-то настроить этот режим, но я не знаю пока что как :с
-            str[0] = tempString;
-            char lastCharOfPastString = ' ';//Сохраняю предыдущую строку чтобы смотреть есть ли . или ?, или !
+            char lastCharOfPastString = '.';//Сохраняю предыдущую строку чтобы смотреть есть ли . или ?, или !
+            // Возможно, можно как-то настроить этот режим, но я не знаю пока что как :с
             for (int i = 0; i < str.Length; i++)// foreach не использовал, потому что нельзя изменять подстроку...
             {
-                string sub = str[i];
+                tempString = str[i];
                 if (lastCharOfPastString == '.' || lastCharOfPastString == '?' || lastCharOfPastString == '!')
                 {
-                    string temp = sub;
-                    temp = temp.Remove(0, 1);
-                    sub = char.ToUpper(sub[0]) + temp;
+                    tempString = char.ToUpper(tempString[0]) + tempString.Remove(0,1);
                 }
-                lastCharOfPastString = sub[^1];
-                Console.Write($"{sub} ");
+                lastCharOfPastString = tempString[^1];
+                Console.Write($"{tempString} ");
             }
             // StringBuilder str = new StringBuilder
             // ("я плохо учил русский язык. забываю начинать предложения с заглавной. хорошо, что можно написать программу!");

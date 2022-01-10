@@ -26,7 +26,6 @@ namespace ConsoleApp1
         }
         public static void Averages()
         {
-            //string str = "Викентий хорошо отметил  день рождения:  покушал пиццу, посмотрел кино, пообщался со студентами в чате";
             string str = "        Викентий    хорошо     отметил  день           рождения:  покуша,,,,,л пиццу, по...,,смотрел ки\\но, пооб.щался со сту..,дентами в чате";
             Console.WriteLine($"1.2.1 Averages\n\rOur original string: {str}");
             ReadString(ref str);
@@ -124,28 +123,6 @@ namespace ConsoleApp1
                 lastCharOfPastString = tempString[^1];
                 Console.Write($"{tempString} ");
             }
-            // StringBuilder str = new StringBuilder
-            // ("я плохо учил русский язык. забываю начинать предложения с заглавной. хорошо, что можно написать программу!");
-            // Console.WriteLine($"\n\r1.2.4 Validator\n\rOur original string: {str}");
-            // for (int i = 0; i < str.Length; i++)
-            // {
-            //     if (!char.IsWhiteSpace(str[i]))
-            //     {
-            //         str[i] = char.ToUpper(str[i]);
-            //         break;
-            //     }
-            // }
-
-            // for (int i = 1; i < str.Length; i++)
-            // {
-            //     if (char.IsLower(str[i]) &&
-            //         (((str[i - 2] == '.') || (str[i - 2] == '!') || (str[i - 2] == '?')) && str[i - 1] == ' ') ||
-            //         ((str[i - 1] == '.') || (str[i - 1] == '!') || (str[i - 1] == '?')))
-            //     {
-            //         str[i] = char.ToUpper(str[i]);
-            //     }
-            // }
-            // Console.WriteLine(str);
         }
     }
 }

@@ -1,0 +1,6 @@
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.1/Task2.1.1/bin/Debug/Task2.1.1.exe
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.1/Task2.1.1/bin/Debug/Task2.1.1.pdb
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.1/Task2.1.1/obj/Debug/Task2.1.1.csproj.AssemblyReference.cache
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.1/Task2.1.1/obj/Debug/Task2.1.1.csproj.CoreCompileInputs.cache
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.1/Task2.1.1/obj/Debug/Task2.1.1.exe
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.1/Task2.1.1/obj/Debug/Task2.1.1.pdb

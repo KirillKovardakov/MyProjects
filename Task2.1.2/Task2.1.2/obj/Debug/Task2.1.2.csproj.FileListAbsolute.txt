@@ -1,0 +1,13 @@
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.2/Task2.1.2/bin/Debug/Task2.1.2.exe
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.2/Task2.1.2/bin/Debug/Task2.1.2.pdb
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.2/Task2.1.2/obj/Debug/Task2.1.2.csproj.AssemblyReference.cache
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.2/Task2.1.2/obj/Debug/Task2.1.2.csproj.CoreCompileInputs.cache
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.2/Task2.1.2/obj/Debug/Task2.1.2.exe
+/Users/kirill/Desktop/MyProjectsEPAM/Task 2/Task2.1.2/Task2.1.2/obj/Debug/Task2.1.2.pdb
+\\Mac\Home\Desktop\MyProjectsEPAM\Task 2\Task2.1.2\Task2.1.2\obj\Debug\Task2.1.2.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\MyProjectsEPAM\Task 2\Task2.1.2\Task2.1.2\obj\Debug\Task2.1.2.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\MyProjectsEPAM\Task 2\Task2.1.2\Task2.1.2\obj\Debug\Task2.1.2.exe
+\\Mac\Home\Desktop\MyProjectsEPAM\Task 2\Task2.1.2\Task2.1.2\obj\Debug\Task2.1.2.pdb
+\\Mac\Home\Desktop\MyProjectsEPAM\Task 2\Task2.1.2\Task2.1.2\bin\Debug\Task2.1.2.exe.config
+\\Mac\Home\Desktop\MyProjectsEPAM\Task 2\Task2.1.2\Task2.1.2\bin\Debug\Task2.1.2.exe
+\\Mac\Home\Desktop\MyProjectsEPAM\Task 2\Task2.1.2\Task2.1.2\bin\Debug\Task2.1.2.pdb

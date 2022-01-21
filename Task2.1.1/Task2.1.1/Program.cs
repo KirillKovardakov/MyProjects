@@ -1,20 +1,26 @@
 ﻿using System;
 using MyString;
 
-namespace Task2
+namespace Program
 {
-    internal class Program
+
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            string str = (Console.ReadLine());
-            MyString(str);
+            if (args is null)
+            {
+                throw new ArgumentNullException(nameof(args));
+            }
 
-        }
-
-        private static void MyString(string str)
-        {
-            throw new NotImplementedException();
+            Console.WriteLine("Input your string, please:");
+            CharArray str = new CharArray(Console.ReadLine());
+            str += "plus string";
+            str.PrintArray();
+            CharArray str2 = new CharArray(str + "a");
+            Console.WriteLine(str.CompareTo(str2));
+            Console.WriteLine(str > str2);
+            Console.ReadKey();
         }
     }
 }

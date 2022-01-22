@@ -1,4 +1,5 @@
 ﻿using System;
+ using System.Text;
 
 namespace Char_Array
 {
@@ -19,7 +20,7 @@ namespace Char_Array
         {
             MyArray = str.MyArray;
         }
-        public char[] ToCharArray(string str)
+        private char[] ToCharArray(string str)
         {
             char[] MyArray = new char[str.Length];
             for (int i = 0; i < str.Length; i++)
@@ -29,34 +30,15 @@ namespace Char_Array
             return MyArray;
         }
 
-        internal int this[int i]
+        public int this[int i]
         {
             get
             {
-                if (i < 0 || i >= MyArray.Length)
-                {
-                    Console.WriteLine("Индекс {0} выходит за границы массива", i);
-                    return 0;
-                }
                 return MyArray[i];
             }
             set
             {
-                if (i < 0 || i >= MyArray.Length)
-                {
-                    Console.WriteLine("Индекс {0} выходит за границы массива", i);
-                }
-                else
-                {
-                    if (value >= 0 && value <= 100)
-                    {
-                        MyArray[i] = (char)value;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Присваивается недопустимое значение {0}", value);
-                    }
-                }
+                MyArray[i] = (char)value;
             }
         }
         public void PrintArray()
@@ -91,17 +73,14 @@ namespace Char_Array
         {
             if (obj == null)
             {
-                Console.WriteLine("String is empty!");
                 return false;
             }
             CharArray charArrayObj = obj as CharArray;
             if (charArrayObj == null)
             {
-                Console.WriteLine("String is empty!");
                 return false;
             }
-            else
-                return Equals(charArrayObj);
+            return Equals(charArrayObj);
         }
 
         public override int GetHashCode()
@@ -112,24 +91,18 @@ namespace Char_Array
         {
             if (myString == null) return 1;
 
-            CharArray otherArray = myString as CharArray;
-            if (otherArray != null)
-            {
-                if (this.MyArray.Length > otherArray.Length()) return 1;
-                else if (this.MyArray.Length < otherArray.Length()) return -1;
-                else
-                {
-                    for (int i = 0; i < this.MyArray.Length; i++)
-                    {
-                        if (this.MyArray[i] > otherArray[i]) return 1;
-                        else if (this.MyArray[i] < otherArray[i]) return -1;
-                    }
-                    return 0;
-                }
-            }
-            //return this.MyArray.ToString().CompareTo(otherArray.MyArray);
+            CharArray otherArray = myString;
+            if (this.MyArray.Length > otherArray.Length()) return 1;
+            else if (this.MyArray.Length < otherArray.Length()) return -1;
             else
-                throw new ArgumentException("Object is not a CharArray");
+            {
+                 for (int i = 0; i < this.MyArray.Length; i++)
+                 {
+                     if (this.MyArray[i] > otherArray[i]) return 1;
+                     else if (this.MyArray[i] < otherArray[i]) return -1;
+                 }
+                 return 0;
+            }
         }
         // Define the is greater than operator.
         public static bool operator >(CharArray operand1, CharArray operand2)
@@ -156,31 +129,20 @@ namespace Char_Array
         }
         public static bool operator ==(CharArray str1, CharArray str2)
         {
-            if (((object)str1) == null || ((object)str2) == null)
-                return Object.Equals(str1, str2);
-
             return str1.Equals(str2);
         }
         public static bool operator !=(CharArray str1, CharArray str2)
         {
-            if (((object)str1) == null || ((object)str2) == null)
-                return !Object.Equals(str1, str2);
-
             return !str1.Equals(str2);
-        }
-        public int Length()
-        {
-            string temp = MyArray.ToString();
-            return temp.Length;
         }
         public override string ToString()
         {
-            string str = "";
+            StringBuilder str = new StringBuilder(MyArray.Length);
             for (int i = 0; i < this.MyArray.Length; i++)
             {
-                str += this.MyArray[i];
+                str[i] = this.MyArray[i];
             }
-            return str;
+            return str.ToString();
         }
     }
 }

@@ -1,24 +1,25 @@
 ﻿using System;
+using Points;
 namespace Task2
 {
-    public class Circle : Point
+    public class Circle : Figure
     {
         public double R { get; set; }
-
 
         public Circle() : base()
         {
             R = 1.0;
         }
-        public Circle(double x, double y, double r) : base(x, y)
+        public Circle(double x, double y, double r)
         {
+            this.Point = new Point(x, y);
             R = r;
         }
 
-        public override string Print() => $"Окружность с центром ({X};{Y}) и радиусом {R}";
-        
+        public override string Print() => $"Окружность с центром ({Point.X};{Point.Y}) и радиусом {R}";
+
         // метод вычисляющий площадь круга
-        public override double Square()
+        public virtual double Square()
         {
             double s = Math.PI * R * R;
             return s;

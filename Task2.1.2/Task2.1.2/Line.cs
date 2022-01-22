@@ -1,10 +1,12 @@
 ﻿using System;
+using Points;
 
 namespace Task2
 {
-    public class Line : Point
+    public class Line : Figure
     {
-        public double Length { get; set; }
+        protected double _length = 0;
+        public double Length { get => _length; set { _length = value; } }
         public Line()
         {
             Length = 0.0;
@@ -18,12 +20,12 @@ namespace Task2
             Length = Math.Abs(x1 - x2);
         }
         public override string Print() => $"Линия длиной {Length}cm";
-        
+
         // метод вычисляющий площадь круга
-        public override double Square()
+        public virtual double Square()
         {
             return 0;
         }
-        
+
     }
 }

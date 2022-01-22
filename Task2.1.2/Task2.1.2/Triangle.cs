@@ -1,7 +1,9 @@
 ﻿using System;
+using Points;
+
 namespace Task2
 {
-    public  class Triangle : Line
+    public class Triangle : Line
     {
         public Point Point1 { get; set; }
         public Point Point2 { get; set; }
@@ -20,7 +22,7 @@ namespace Task2
             Point3 = new Point(x3, y3);
         }
         public override string Print() => $"Треугольник с точками: x1 = {Point1}, x2 = {Point2} и x3 = {Point3}";
-        
+
         public override double Square()
         {
             double a11 = Point1.X - Point3.X;

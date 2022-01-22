@@ -1,4 +1,6 @@
 ﻿using System;
+using Points;
+
 namespace Task2
 {
     public class Ring : Circle
@@ -11,15 +13,14 @@ namespace Task2
         }
         public Ring(double x, double y, double innerRadius, double outerRadius)
         {
-            X = x;
-            Y = y;
+            this.Point = new Point(x, y);
             InnerRadius = innerRadius;
             OuterRadius = outerRadius;
         }
-        public override string Print() => $"Кольцо:\n\r с центром: ({X};{Y})" +
+        public override string Print() => $"Кольцо:\n\r с центром: ({Point.X};{Point.Y})" +
                 $", внутреннем радиусом: {InnerRadius} " +
                 $"и внешним радиусом: {OuterRadius}";
-        
+
         public override double Square()
         {
             double s = Math.PI * (OuterRadius * OuterRadius - InnerRadius * InnerRadius);

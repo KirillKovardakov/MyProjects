@@ -3,6 +3,8 @@ using System.Linq;
 using System.Text;
 using System.Collections.Generic;
 using MyEnum;
+using Points;
+
 
 namespace Task2
 {
@@ -11,7 +13,7 @@ namespace Task2
 
         public static void Main(string[] args)
         {
-            List<Point> spisok = new List<Point>();
+            List<Figure> figures = new List<Figure>();
 
 
             int actionVariable;
@@ -22,16 +24,16 @@ namespace Task2
                 {
 
                     case 1:
-                        spisok.Add(CreateFigure(InputFigureType()));
+                        figures.Add(CreateFigure(InputFigureType()));
                         break;
                     case 2:
-                        for (int i = 0; i < spisok.Count(); i++)
+                        for (int i = 0; i < figures.Count(); i++)
                         {
-                            Console.WriteLine(spisok[i].Print());
+                            Console.WriteLine(figures[i].Print());
                         }
                         break;
                     case 3:
-                        spisok = RemoveFigures();
+                        figures = RemoveFigures();
                         break;
                     default: break;
                 }
@@ -48,7 +50,7 @@ namespace Task2
 
         }
 
-        public static Point CreateFigure(FigureType type)
+        public static Figure CreateFigure(FigureType type)
         {
             switch (type)
             {
@@ -80,6 +82,6 @@ namespace Task2
 
             return result;
         }
-        private static List<Point> RemoveFigures() => new List<Point>();
+        private static List<Figure> RemoveFigures() => new List<Figure>();
     }
 }

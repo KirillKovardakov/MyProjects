@@ -43,7 +43,6 @@ namespace Char_Array
         }
         public void PrintArray()
         {
-            Console.WriteLine("Your Char array: ");
             for (int i = 0; i < MyArray.Length; i++)
             {
                 Console.Write(MyArray[i]);

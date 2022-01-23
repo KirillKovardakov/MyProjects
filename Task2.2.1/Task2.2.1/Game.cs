@@ -82,7 +82,7 @@ namespace Task2
         }
         public void MoveUp(Point to)
         {
-            if (Field[PLayer.X - 1, PLayer.Y] != '&') _scores--;
+            if (Field[PLayer.X - 1, PLayer.Y] == '&') _scores--;
             if (Field[PLayer.X - 1, PLayer.Y] != 'O')
             {
                 Field[PLayer.X, PLayer.Y] = '.';
@@ -99,7 +99,7 @@ namespace Task2
 
         public void MoveDown(Point to)
         {
-            if (Field[PLayer.X + 1, PLayer.Y] != '&') _scores--;
+            if (Field[PLayer.X + 1, PLayer.Y] == '&') _scores--;
             if (Field[PLayer.X + 1, PLayer.Y] != 'O')
             {
                 Field[PLayer.X, PLayer.Y] = '.';
@@ -116,7 +116,7 @@ namespace Task2
 
         public void MoveLeft(Point to)
         {
-            if (Field[PLayer.X, PLayer.Y - 1] != '&') _scores--;
+            if (Field[PLayer.X, PLayer.Y - 1] == '&') _scores--;
             if (Field[PLayer.X, PLayer.Y - 1] != 'O')
             {
                 Field[PLayer.X, PLayer.Y] = '.';
@@ -133,7 +133,7 @@ namespace Task2
 
         public void MoveRight(Point to)
         {
-            if (Field[PLayer.X, PLayer.Y + 1] != '&') _scores--;
+            if (Field[PLayer.X, PLayer.Y + 1] == '&') _scores--;
             if (Field[PLayer.X, PLayer.Y + 1] != 'O')
             {
                 Field[PLayer.X, PLayer.Y] = '.';

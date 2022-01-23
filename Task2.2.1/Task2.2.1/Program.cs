@@ -10,6 +10,8 @@ namespace Task2
             Game game = new Game();
             game = Start(game);
             bool tempButton = true;
+            Console.WriteLine("It is necessary to collect bonuses on the map, to win, they are marked as \"&\". You play as \"P\" and you can't get caught by the monster \"M\"");
+            Console.WriteLine("Необходимо собрать бонусы на карте, чтобы победить, они отмечены как \"&\". Вы играете за \"P\" и нельзя попасться монстру \"M\"");
             do
             {
                 

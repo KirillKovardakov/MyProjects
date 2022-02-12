@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\Mac\\Home\\Desktop\\MyProjectsEPAM\\Task 3\\Task3.2\\Task3.2\\Task3.2.csproj": {}
+    "\\\\Mac\\Home\\Desktop\\MyProjectsEPAM\\Без названия\\Task 3\\Task3.2\\Task3.2\\Task3.2.csproj": {}
   },
   "projects": {
-    "\\\\Mac\\Home\\Desktop\\MyProjectsEPAM\\Task 3\\Task3.2\\Task3.2\\Task3.2.csproj": {
+    "\\\\Mac\\Home\\Desktop\\MyProjectsEPAM\\Без названия\\Task 3\\Task3.2\\Task3.2\\Task3.2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\MyProjectsEPAM\\Task 3\\Task3.2\\Task3.2\\Task3.2.csproj",
+        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\MyProjectsEPAM\\Без названия\\Task 3\\Task3.2\\Task3.2\\Task3.2.csproj",
         "projectName": "Task3.2",
-        "projectPath": "\\\\Mac\\Home\\Desktop\\MyProjectsEPAM\\Task 3\\Task3.2\\Task3.2\\Task3.2.csproj",
+        "projectPath": "\\\\Mac\\Home\\Desktop\\MyProjectsEPAM\\Без названия\\Task 3\\Task3.2\\Task3.2\\Task3.2.csproj",
         "packagesPath": "C:\\Users\\kirill\\.nuget\\packages\\",
-        "outputPath": "\\\\Mac\\Home\\Desktop\\MyProjectsEPAM\\Task 3\\Task3.2\\Task3.2\\obj\\",
+        "outputPath": "\\\\Mac\\Home\\Desktop\\MyProjectsEPAM\\Без названия\\Task 3\\Task3.2\\Task3.2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

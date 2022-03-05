@@ -12,19 +12,19 @@ namespace SuperString
             for (int i = 0; i < str.Length; i++)
             {
                 if (list.Count >= 2) return "Mixed";
-                if (str[i] >= 128 && str[i] <= 255)
+                if (str[i] >= 'А' && str[i] <= 'я' || str[i] == 'ё' || str[i] == 'Ё')
                 {
                     if (list.Count == 0) list.Add(1);
                     if (list.Count == 1)
                         if (list[0] != 1) list.Add(1); //Russian
                 }
-                else if (str[i] >= 65 && str[i] <= 90 || str[i] >= 73 && str[i] <= 122)
+                else if (str[i] >= 'A' && str[i] <= 'Z' || str[i] >= 'a' && str[i] <= 'z')
                 {
                     if (list.Count == 0) list.Add(2); //English
                     if (list.Count == 1)
                         if (list[0] != 2) list.Add(2);
                 }
-                else if (str[i] >= 48 && str[i] <= 57)
+                else if (str[i] >= '0' && str[i] <= '9')
                 {
                     if (list.Count == 0) list.Add(3);
                     if (list.Count == 1)

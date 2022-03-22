@@ -9,7 +9,7 @@ namespace Task_3._3
 {
     class Program
     {
-         static void Main(string[] args)
+        static void Main(string[] args)
         {
             //int[] mas = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 4 };
             //Console.WriteLine(mas.Summ());
@@ -17,11 +17,10 @@ namespace Task_3._3
             //Console.WriteLine(mas.MaxRepeatedElement());
             //string str = "пываьлплываьпвав";
             //Console.WriteLine(str.WhatLanguage());
-            OrderTable order = new OrderTable();
             
             do 
             {
-                Console.WriteLine( order.Order(GetName(), InputPizzaType()));
+                _ = new Order(GetName(), InputPizzaType());
             } while(GetConsoleIntValue() != 0);
         }
         public static int GetConsoleIntValue()
@@ -30,7 +29,7 @@ namespace Task_3._3
             int result;
             if (Int32.TryParse(value, out result))
                 return result;
-            Console.WriteLine("Incorrect input! Can't parse to Integer!");
+            Console.WriteLine("Incorrect input! Can't parse to Int32!");
             value = Console.ReadLine();
             if (Int32.TryParse(value, out result))
                 return result;

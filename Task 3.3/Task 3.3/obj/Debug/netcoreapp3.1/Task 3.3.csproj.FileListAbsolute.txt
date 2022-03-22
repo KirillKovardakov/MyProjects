@@ -1,0 +1,13 @@
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\bin\Debug\netcoreapp3.1\Task 3.3.exe
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\bin\Debug\netcoreapp3.1\Task 3.3.deps.json
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\bin\Debug\netcoreapp3.1\Task 3.3.runtimeconfig.json
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\bin\Debug\netcoreapp3.1\Task 3.3.runtimeconfig.dev.json
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\bin\Debug\netcoreapp3.1\Task 3.3.dll
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\bin\Debug\netcoreapp3.1\Task 3.3.pdb
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\obj\Debug\netcoreapp3.1\Task 3.3.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\obj\Debug\netcoreapp3.1\Task 3.3.AssemblyInfoInputs.cache
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\obj\Debug\netcoreapp3.1\Task 3.3.AssemblyInfo.cs
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\obj\Debug\netcoreapp3.1\Task 3.3.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\obj\Debug\netcoreapp3.1\Task 3.3.dll
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\obj\Debug\netcoreapp3.1\Task 3.3.pdb
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 3\Task 3.3\Task 3.3\obj\Debug\netcoreapp3.1\Task 3.3.genruntimeconfig.cache

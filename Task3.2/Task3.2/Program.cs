@@ -27,10 +27,10 @@ namespace Task3._2
             mas3.AddRange(stack);
             mas3.AddRange(arr);
             mas3.Remove(8);
-            mas3.Insert(8, 200);
-            mas3.Insert(128,13);
-            Console.WriteLine(mas3.Length());
-            Console.WriteLine(mas3.Capacity());
+            mas3.Insert(7, 200);
+            mas3.Insert(8,13);
+            Console.WriteLine($"Length: {mas3.Length()}");
+            Console.WriteLine($"Capacity: {mas3.Capacity()}");
             Print(mas3);
         }
         public static void Print<T>(DynamicArray<T> tempArray)

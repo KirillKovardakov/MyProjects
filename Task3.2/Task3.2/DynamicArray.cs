@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+
 
 namespace DynamicArray
 {
     public class DynamicArray<T> : IEnumerable<T>
     {
-        public T[] Mass { get; set; } = new T[8];
+        private T[] Mass { get; set; } = new T[8];
         private int Count { get; set; } = 0;
         public DynamicArray()
         {
@@ -29,19 +31,17 @@ namespace DynamicArray
         public void Add(T temp)
         {
             Count++;
-            CapacityTest();
+            EnsureCapacity();
             Mass[Count - 1] = temp;
         }
         public void AddRange(IEnumerable<T> temp)
         {
             FactorCapacity(temp);
-            foreach (var item in temp)
-            {
-                Count++;
-                Mass[Count - 1] = item;
-            }
+            var tempMass = temp.ToArray();
+            Array.Copy(tempMass, 0,  Mass, Count, tempMass.Length);
+            Count += tempMass.Length;
         }
-        private void CapacityTest()
+        private void EnsureCapacity()
         {
             if (Count > Mass.Length)
             {
@@ -51,34 +51,23 @@ namespace DynamicArray
         private T[] DoubleCapacity()
         {
             var newMass = new T[Mass.Length * 2];
-            for (int i = 0; i < Mass.Length; i++)
-            {
-                newMass[i] = Mass[i];
-            }
+            Array.Copy(Mass, newMass, Mass.Length);
             return newMass;
+            
         }
         private void FactorCapacity(IEnumerable<T> temp)
         {
-            int countAddArray = 0;
-            foreach (var item in temp)
-            {
-                countAddArray++;
-            }
-            int factor = 1;
-            while (countAddArray + Count > factor * Mass.Length) factor *= 2;
-            var newMass = new T[Mass.Length * factor];
-            for (int i = 0; i < Mass.Length; i++)
-            {
-                newMass[i] = Mass[i];
-            }
+            var newTemp = temp.ToArray();
+            var newMass = new T[(newTemp.Length + Mass.Length) + 2];
+            Array.Copy(Mass, newMass, Mass.Length);
             Mass = newMass;
         }
         public bool Insert(int position, T value)
         {
             if (position < 0 || position >= Count) throw new ArgumentOutOfRangeException();
             ++Count;
-            CapacityTest();
-            for (int i = Count - 1; i > position; i--) //сдвиг элементов вправа
+            EnsureCapacity();
+            for (int i = Count - 1; i > position; i--) 
             {
                 Mass[i] = Mass[i - 1];
             }

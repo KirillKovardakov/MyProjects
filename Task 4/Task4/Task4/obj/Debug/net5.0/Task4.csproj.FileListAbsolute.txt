@@ -1,0 +1,16 @@
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\bin\Debug\net5.0\Task4.exe
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\bin\Debug\net5.0\Task4.deps.json
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\bin\Debug\net5.0\Task4.runtimeconfig.json
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\bin\Debug\net5.0\Task4.runtimeconfig.dev.json
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\bin\Debug\net5.0\Task4.dll
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\bin\Debug\net5.0\ref\Task4.dll
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\bin\Debug\net5.0\Task4.pdb
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\obj\Debug\net5.0\Task4.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\obj\Debug\net5.0\Task4.GeneratedMSBuildEditorConfig.editorconfig
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\obj\Debug\net5.0\Task4.AssemblyInfoInputs.cache
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\obj\Debug\net5.0\Task4.AssemblyInfo.cs
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\obj\Debug\net5.0\Task4.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\obj\Debug\net5.0\Task4.dll
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\obj\Debug\net5.0\ref\Task4.dll
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\obj\Debug\net5.0\Task4.pdb
+\\Mac\Home\Desktop\MyProjectsEPAM\Без названия\Task 4\Task4\Task4\obj\Debug\net5.0\Task4.genruntimeconfig.cache
